@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forestry</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 20px;
+        }
+        #end {
+            text-align:center;
+            font-size:larger;
+        }
+        #imgend {
+            height:250px;
+            object-position:right;
+        }
+        button {
+            background: linear-gradient(to right, #c02425, #f0cb35);
+            border: solid;
+            border-radius: 25px;
+            color: white;
+            padding: 18px 36px;
+            text-align: center;
+            text-decoration:none;
+            font-size: 30px;
+            margin: 4px 2px;
+            transition-duration: 0.6s;
+            cursor: pointer;
+            position: sticky;
+
+        }
+            button:hover {
+                background: linear-gradient(to right,#f0cb35,#c02425);
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            button:active {
+                background: linear-gradient(to right,#f0cb35,#c02425);
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+        body {
+            background-image: url(../grad2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+        }
+       .bg-image {
+            background: url("../bg.png") no-repeat scroll right bottom;
+            height: 500px;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+        }
+        ul {
+            list-style-type: none;
+            margin-bottom: 100px;
+            padding: 0;
+            overflow:hidden;
+            border-end-start-radius: 50px;
+            border-start-end-radius: 50px;
+            background: linear-gradient(to right, rgb(60, 16, 83), rgb(173, 83, 137),#d19dd0,#e0e3a9);
+        }
+        li {
+            float: right;
+        }
+            li:nth-last-child(-n+2) {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: indigo;
+                margin:5px;
+                text-align: center;
+                font-size: larger;
+                font-weight: 1000;
+                text-decoration: none;
+                border: 2px outset seagreen;
+                border-radius: 15px;
+                padding: 10px;
+            }
+
+                li a:hover {
+                    color: black;
+                    background: linear-gradient(to bottom,#E4D0D0 70%,#430f58 100%);
+                    border: 2px outset indigo;
+                }
+                li a:active {
+                    transform: translateY(4px);
+                    box-shadow: 0 2px #430f58;
+                }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><img src="../logo.png" alt="logo" style="float:left;height:50px"></li>
+        <li><p style="color:white">Let us unite our hands for the conservation of trees....</p></li>
+    </ul>
+    <div class="bg-image">
+        <h1 style="font-style: italic;font-size:70px">Forestry community</h1>
+        <p style="font-family: 'Times New Roman', Times, serif; font-size:x-large;padding:40px"><em>Alone, we can do so little...<br><span style="padding-left:70px">Together,we can do so much...</span></em> </p>
+        <br>
+        <span style="padding-left:12%"><button id="join" name="join">Join</button></span>
+    </div>
+    <center><img id="imgend" src="../conc.png" alt="plant in hand"></center>
+    <p id="end"><b>“You must be the change you wish to see in the world.”</b></p>
+
+</body>
+</html>
