@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image:url(../mid.jpg);
+            background-attachment:fixed;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        .des {
+            border:2px solid #24243e;
+            border-left: 12px solid #24243e;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 13px;
+        }
+        #navbar {
+            overflow: hidden;
+            background-image: url(../back.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 120px 10px;
+            transition: 0.4s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        #m1 {
+            float: left;
+            border-radius: 50px 5px;
+            height:150px;
+        }
+        #navbar a,#name {
+            float: left;
+            color: white;
+            text-align: center;
+            padding:15px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+        #navbar #name {
+            color: white;
+            font-family: 'HoloLens MDL2 Assets';
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+        #navbar a {
+            border: 2px solid white;
+            margin: 4px;
+            background-color: steelblue;
+        }
+        #navbar a:hover {
+            background-color:white;
+            color:black;
+        }
+        #navbar a:active, button:active {
+            transform: translateY(4px);
+        }
+        #navbar-right {
+            float: right;
+        }
+        @media screen and (max-width: 510px) {
+            #navbar {
+                padding: 20px 10px !important;
+            }
+
+                #navbar a,#name,#m1,#wish{
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+
+            #navbar-right {
+                float: none;
+            }
+        }
+      button{
+          padding:25px;
+          background-color:#24243e;
+          font-size:25px;
+          border-radius:3px;
+          color:white;
+          width:200px;
+          height:75px;
+      } 
+      button:hover{
+          background-color:midnightblue;
+      }
+        .des1 {
+            border: 1px solid #808080;
+            border-left: 8px solid black;
+            border-radius: 30px;
+            padding:0px;
+            background-color:white;
+            margin-bottom:10px;
+        }
+        #get1{
+            margin-left:50px;
+        }
+        input[type=text], select, textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin:2px;
+            resize: vertical;
+        }
+        #umail {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width:50%;
+        }
+        .content {
+            margin-left: 15px;
+            font-size: 23px;
+            border-bottom: 1px solid #24243e;
+            margin-top:50px;
+        }
+        #send {
+            color: white;
+            padding: 10px;
+            background-color: #24243e;
+        }
+        #send:active{
+            transform:translateY(3px);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <start><h1 id="wish" style="color:white;font-size:100px">Hello..! I am,</h1></start>
+        <img src="../dp.png" id="m1" alt="profile_picture" />
+        <h1 id="name" style="padding-left:2%">Basheera Shaik</h1>
+        <div id="navbar-right">
+            <a href="#navbar">Home</a>
+            <a href="#get1">Contact</a>
+            <a href="#1des">About</a>
+        </div>
+    </div>
+    <div id="content" style="margin-top:600px;padding:15px 15px 100px;font-size:30px;">
+        <p id="1des">
+            <center>
+                Scroll down to have a look on my portfolio....<span style="padding-left:13%">
+                    <a href="#Basheera_cv" download="Basheera_cv">
+                        <button type="button">Download cv</button>
+                </span></a>
+            </center>
+        </p>
+        <div class="content">
+            <details>
+                <summary>About</summary>
+                <div class="des1" style="padding:10px">
+                    <p>I am a student pursuing Btech,2nd year,an aspiring computer software engineer who gives her hundred percent in any work that she chooses to do.</p>
+                    <p>Looking for an opportunity where I can make the best of my potential and contribute to the organization's growth. Seeking a position in a company where I can launch my career and build a valuable skill set.</p>
+                </div></details>
+        </div>
+        <div class="content">
+            <details>
+                <summary>My skills</summary>
+                <div class="des">
+                <div>
+                    <details>
+                        <summary>Technical Skills</summary>
+                        <div class="des1">
+                            <ul>
+                                <li><p>C programming (Basic)</p></li>
+                                <li><p>Python programming (Basic)</p></li>
+                                <li><p>Java programming (Basic)</p></li>
+                                <li><p>C++ programming (Basic)</p></li>
+                                <li><p>SQL (Structured Query Language)</p></li>
+                                <li><p>Frontend development:HTML, CSS</p></li>
+                                <li><p>Microsoft Office</p></li>
+                            </ul>
+                            </div>
+                    </details>
+                </div>
+                <div>
+                    <details>
+                            <summary>Soft skills</summary>
+                            <div class="des1">
+                                <ul>
+                                    <li><p>Communication</p></li>
+                                    <li><p>Creative thinking</p></li>
+                                    <li><p>Desire to learn</p></li>
+                                    <li><p>Logical thinking</p></li>
+                                    <li><p>Planning</p></li>
+                                </ul>
+                            </div>   
+                    </details>
+                    </div>
+                </div>
+
+            </details>
+        </div>
+        <div class="content">
+            <details>
+                <summary>Activities & Projects</summary>
+                <div class="des1">
+                    <ul>
+                        <li><p>Conducted a community survey on<em><b> Awareness on hygiene</b></em> in <em>my native place.</em></p></li>
+                        <li><p>Mini project on <em><b>House price prediction using machine learning</b></em>(on going).</p></li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+        <div class="content">
+            <details>
+                <summary>Achievements</summary>
+                <div class="des1">
+                    <ul>
+                        <li><p>NPTEL Swayam certification in the course Data structures using python programming</p></li>
+                        <li><p>NPTEL Swayam certification in the course Programming in modern c++</p></li>
+                        <li><p>Microsoft Azure fundamentals (AZ-900) certification</p></li>
+                        <li><p>AWS Academy Cloud foundations certification</p></li>
+                        <li><p>AWS Academy Cloud architecting certification</p></li>
+                    </ul>
+                    </div>
+            </details>
+            </div>
+            <div >
+                <details class="content">
+                    <summary>Interests</summary>
+                    <div class="des1">
+                        <ul>
+                            <li><p>Web development</p></li>
+                            <li><p>Problem solving</p></li>
+                            <li><p>Designing</p></li>
+                        </ul>
+                        </div>
+                </details>
+            </div>
+        </div>
+    </div>
+        <div id="get1">
+                <span><b>Get in touch...</b></span>
+                <br />
+                <input type="email" id="umail" name="umail" placeholder="Enter your email address" />
+                <br />
+                <input type="text" id="uname" name="uname" placeholder="Enter your name" />
+                <br />
+                <textarea text id="umsg" name="umsg" placeholder="Enter your message"></textarea>
+                <br />
+                <input type="button" id="send" value="send"/>
+        </div>
+        <br />
+        <footer>
+            <div style="background-image:url(../conc.jpg)">
+                <center>
+                    <br />
+                    <p style="color:white">Contact info</p>
+                    <br />
+                    <p><img src="../mail.png" alt="email_logo" style="height:20px" /><span style="padding-left:1%;color:white">email  : shaikbasheeraa@gmail.com</span></p>
+                    <br />
+                    <p><img src="../link.png" alt="linkedln_logo" style="height:20px" /><span style="padding-left:1%;color:white">linkedln : linkedin.com/in/basheera-shaik-7454b226b</span></p>
+                    <br />
+                </center>
+            </div>
+        </footer>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.padding = "20px 10px";
+                document.getElementById("name").style.fontSize = "25px";
+                document.getElementById("m1").style.height = "0px";
+                document.getElementById("wish").style.fontSize = "0px";
+            } else {
+                document.getElementById("navbar").style.padding = "120px 10px";
+                document.getElementById("name").style.fontSize = "40px";
+                document.getElementById("m1").style.height = "150px";
+                document.getElementById("wish").style.fontSize = "100px";
+            }
+        }
+    </script>
+</body>
+</html>
