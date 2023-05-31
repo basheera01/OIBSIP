@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature converter</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            place-content: center;
+            background-image:url(../temp.webp);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+
+        main {
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 5px rgb(5, 86, 139);
+            padding: 2rem;
+        }
+
+        #form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .convert {
+            all: unset;
+            color: white;
+            background-color:#031320;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input,
+        select {
+            margin-block-end: 1rem;
+            font-size: 1.15rem;
+            padding:10px;
+        }
+
+        .label {
+            color: #555;
+            font-size:xx-large;
+        }
+
+        label {
+            gap: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result {
+            font-size:50px;
+            
+        }
+        button:active{
+            transform:translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <center><p style="margin-bottom:125px;font-size:50px;">Temperature converter</p></center>
+    <main>
+        <form id="form">
+            <label class="label">
+                Value :
+                <input type="text"
+                       id="degrees"
+                       pattern="[0-9\.]+"
+                       required
+                       title="Numbers Only" placeholder="Enter temperature"/>
+            </label>
+            <label class="label">
+                Input unit :
+                <select name="type" id="type" required>
+                    <option value="c" selected>celsius</option>
+                    <option value="f">Fahrenheit</option>
+                    <option value="k">Kelvin</option>
+                </select>
+            </label>
+            <button class="convert" style="margin-top:25px">Convert</button>
+        </form>
+        <p class="label">Result :</p>
+        <p class="result" id="result1"></p>
+        <p class="result" id="result2"></p>
+    </main>
+    <script>
+        const form = document.querySelector("#form");
+        console.log("call1");
+        form.addEventListener("submit", (e) => {
+            console.log("call2");
+            e.preventDefault();
+            console.log("call3");
+            const result1 = document.querySelector("#result1");
+            const result2 = document.querySelector("#result2");
+            let type = document.querySelector("#type").value;
+            let degrees = document.querySelector("#degrees").value;
+            degrees = parseFloat(degrees);
+            if (type === "c") {
+                console.log("call4");
+                console.log(convertToFahrenheit(degrees, "c"));
+                console.log(convertToKelvin(degrees, "c"));
+                result1.innerText = convertToFahrenheit(degrees, "c");
+                result2.innerText = convertToKelvin(degrees, "c");
+            } else if (type === "f") {
+                console.log("call4");
+                console.log(convertTocelsius(degrees, "c"));
+                console.log(convertToKelvin(degrees, "c"));
+                result1.innerText = convertTocelsius(degrees, "f");
+                result2.innerText = convertToKelvin(degrees, "f");
+            } else {
+                console.log("call4");
+                console.log(convertTocelsius(degrees, "c"));
+                console.log(convertToFahrenheit(degrees, "c"));
+                result1.innerText = convertTocelsius(degrees, "k");
+                result2.innerText = convertToFahrenheit(degrees, "k");
+            }
+        });
+        const convertTocelsius = (value, from) => {
+            if (from === "f") {
+                return `${((value - 32) * (5 / 9)).toFixed(2)} C`;
+            } else {
+                return `${(value - 273.15).toFixed(2)} C`;
+            }
+        };
+        const convertToFahrenheit = (value, from) => {
+            if (from === "c") {
+                return `${(value * 1.8 + 32).toFixed(2)} F`;
+            } else {
+                return `${((value * 9) / 5 - 459.67).toFixed(2)} F`;
+            }
+        };
+        const convertToKelvin = (value, from) => {
+            if (from === "f") {
+                return `${((value + 459.67) * (5 / 9)).toFixed(2)} K`;
+            } else {
+                return `${(value + 273.15).toFixed(2)} K`;
+            }
+        };
+    </script>
+</body>
+</html>
